@@ -25,7 +25,7 @@ export default function LoginForm({
       <AppText variant="caption" style={styles.sub}>
         {isEmailStep
           ? 'We will send you a one-time code'
-          : 'Enter the 6-digit code we sent you'}
+          : 'Enter the 8-digit code we sent you'}
       </AppText>
 
       {isEmailStep ? (
@@ -41,9 +41,9 @@ export default function LoginForm({
         <AppInput
           value={otp}
           onChangeText={onOtpChange}
-          placeholder="000000"
+          placeholder="00000000"
           keyboardType="number-pad"
-          maxLength={6}
+          maxLength={8}
           error={error}
           style={styles.input}
         />
